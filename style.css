@@ -1,0 +1,91 @@
+.w3-sidebar {
+    width: 110px;
+    background: #2d0a72;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    transition: opacity 0.3s, visibility 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.w3-sidebar.expanded {
+    visibility: visible;
+    opacity: 1;
+}
+
+#main {
+    margin-left: 0px;
+    transition: margin-left 0.3s;
+}
+
+.w3-sidebar.expanded~#main {
+    margin-left: 120px;
+    /* Ajuste para o espaço da sidebar */
+}
+
+.toggle-btn {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    /* Garante que o botão fique acima da sidebar */
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+    color: #f3647e;
+}
+
+h5 {
+    color: #ff6961;
+
+}
+
+.h1 {
+    color: #f3647e;
+}
+
+.container {
+    font-size: 26px;
+}
