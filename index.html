@@ -117,6 +117,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="w3-container w3-center">
+            <video width="700" height="315" controls autoplay muted>
+                <source src="imagens/NFS2016.mp4" type="video/mp4">
+            </video>
+        </div>
+
     </div>
     <div class="w3-container" style=" background-color: #f3647e;
     color:white;">
@@ -157,6 +164,13 @@
                 </div>
             </div>
         </div>
+
+        <div class="w3-container w3-center">
+            <video width="700" height="315" controls autoplay muted>
+                <source src="imagens/NFSPAYBmp4.mp4" type="video/mp4">
+            </video>
+        </div>
+
     </div>
 
     <div class="w3-container" style="background-color :#f3647e;
@@ -195,7 +209,7 @@
         </div>
 
         <div class="w3-container w3-center">
-            <video width="700" height="315" controls>
+            <video width="700" height="315" controls autoplay muted>
                 <source src="imagens/NFSUNB.mp4" type="video/mp4">
             </video>
         </div>
@@ -273,7 +287,7 @@
                 </p>
             </div>
 
-            <div id="car3D"></div>
+         
 
         </div>
     </div>
@@ -315,62 +329,8 @@
             };
         });
 
-        let car;
-
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 500, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, 500);
-        document.getElementById('car3D').appendChild(renderer.domElement);
 
 
-        const loader = new THREE.GLTFLoader();
-        loader.load('assets/models/scene.gltf', function (gltf) {
-            car = gltf.scene;
-            scene.add(gltf.scene);
-            gltf.scene.position.y = -0.5;
-        }, undefined, function (error) {
-            console.error(error);
-        });
-
-        const light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(5, 5, 5).normalize();
-        scene.add(light);
-
-        camera.position.z = 5;
-
-        let moveSpeed = 0.1;
-        document.addEventListener('keydown', (event) => {
-            if (car) {
-                switch (event.key) {
-                    case 'ArrowUp':
-                        car.position.z -= moveSpeed;
-                        break;
-                    case 'ArrowDown':
-                        car.position.z += moveSpeed;
-                        break;
-                    case 'ArrowLeft':
-                        car.position.x -= moveSpeed;
-                        break;
-                    case 'ArrowRight':
-                        car.position.x += moveSpeed;
-                        break;
-                }
-            }
-        });
-
-
-        function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
-        }
-        animate();
-
-        window.addEventListener('resize', () => {
-            renderer.setSize(window.innerWidth, 500);
-            camera.aspect = window.innerWidth / 500;
-            camera.updateProjectionMatrix();
-        });
 
     </script>
 </body>
