@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sixtyfour+Convergence&display=swap');
+
+
 .w3-sidebar {
     width: 110px;
-    background: #2d0a72;
-    position: fixed;
+    background: #f3647e;
+    position: relative;
     top: 0;
     z-index: 1;
     height: 100vh;
     transition: opacity 0.3s, visibility 0.3s;
     visibility: hidden;
     opacity: 0;
+    justify-content: space-between;
 }
 
 .w3-sidebar.expanded {
@@ -47,15 +51,6 @@
     margin-bottom: 12px
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Montserrat", sans-serif
-}
 
 .carousel-container {
     position: relative;
@@ -79,19 +74,31 @@ body {
 }
 
 h2 {
-    color: #f3647e;
+    color: black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 h5 {
     color: #ff6961;
-
 }
 
-.h1 {
+h1 {
     color: #f3647e;
+    font-family: "Sixtyfour Convergence", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BLED" 0,
+        "SCAN" 0,
+        "XELA" 0,
+        "YELA" 0;
+
 }
 
-.h3 {
+h3 {
     color: #ff6961;
 }
 
