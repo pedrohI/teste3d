@@ -25,6 +25,11 @@
     /* Ajuste para o espaço da sidebar */
 }
 
+.w3-bar-item {
+    display: flow-root;
+    align-items: center;
+}
+
 .toggle-btn {
     font-size: 24px;
     color: white;
