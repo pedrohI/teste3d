@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sixtyfour+Convergence&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oxanium:wght@200..800&family=Sixtyfour+Convergence&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/cbd1c4f82a.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
@@ -69,12 +72,35 @@
     <br>
     <br>
 
-    <div class="sketchfab-embed-wrapper" style="display: flex; justify-content: center;"> <iframe
-            title="Nissan Skyline GTR r33" frameborder="0" allowfullscreen mozallowfullscreen="true"
-            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-            execution-while-out-of-viewport execution-while-not-rendered web-share width="564" height="317"
-            src="https://sketchfab.com/models/6df98cc48f5a4c3192950e5a91e74b96/embed?autospin=1&autostart=1&preload=1&ui_theme=dark">
-        </iframe> </div>
+    <div class="slider">
+        <div class="slide active sketchfab-embed-wrapper"> <iframe
+                title="BMW M3 GTR E46 Street ACschnitzer BlackEdition" frameborder="0" allowfullscreen
+                mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="564"
+                height="317"
+                src="https://sketchfab.com/models/7f060f9d44b74c34a5184399a6cfc6d7/embed?autospin=1&autostart=1&preload=1&ui_theme=dark">
+            </iframe> </div>
+        <div class="slide sketchfab-embed-wrapper" style="display: flex; justify-content: center;"> <iframe
+                title="Nissan Skyline GTR r33" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                execution-while-out-of-viewport execution-while-not-rendered web-share width="564" height="317"
+                src="https://sketchfab.com/models/6df98cc48f5a4c3192950e5a91e74b96/embed?autospin=1&autostart=1&preload=1&ui_theme=dark">
+            </iframe> </div>
+        <div class="slide sketchfab-embed-wrapper"> <iframe title="BMW M3 e46 Drift" frameborder="0" allowfullscreen
+                mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="564"
+                height="317"
+                src="https://sketchfab.com/models/5e4eeb8e25df4fc380f01870e74fab3d/embed?autospin=1&autostart=1&preload=1&ui_theme=dark">
+            </iframe> </div>
+        <div class="slide sketchfab-embed-wrapper"> <iframe title="2025 Porsche 911 Carrera GTS" frameborder="0"
+                allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport
+                execution-while-not-rendered web-share width="564" height="317"
+                src="https://sketchfab.com/models/2c3760d955e44cbfa1115564c9191b5d/embed?autostart=1&preload=1&ui_theme=dark">
+            </iframe> </div>
+        <div class="arrow prev" onclick="plusSlides(-1)">&lt;</div>
+        <div class="arrow next" onclick="plusSlides(1)">&gt;</div>
+    </div>
 
     <div class="w3-row-padding w3-margin-top"
         style=" background-color: #000000; display: flex; justify-content: center;">
@@ -260,7 +286,7 @@
                     <hr> História do Jogo
                 </h3>
 
-                <p> Início e Lançamento (1994-1997)
+                <h6><p> Início e Lançamento (1994-1997)
                     A série começou em 1994 com o lançamento de "Need for Speed" para 3DO. O jogo apresentou uma
                     jogabilidade centrada em corridas de alta velocidade em uma variedade de carros, além de
                     gráficos impressionantes para a época. O sucesso inicial levou ao desenvolvimento de sequências,
@@ -301,7 +327,7 @@
                     jogos em constante mudança. Com cada novo lançamento, os fãs esperam mais adrenalina, carros
                     incríveis e experiências de corrida únicas.
 
-                </p>
+                </p></h6>
             </div>
 
 
@@ -348,7 +374,24 @@
         });
 
 
+        let slideIndex = 0;
+        showSlides(slideIndex);
 
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex].style.display = "block";
+        }
 
     </script>
 </body>
